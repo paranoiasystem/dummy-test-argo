@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: dummy-statefulset
+spec:
+  serviceName: dummy-headless
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dummy
+  template:
+    metadata:
+      labels:
+        app: dummy
+    spec:
+      containers:
+      - name: dummy
+        image: busybox:1.36
+        command: ["sh", "-c", "while true; do echo hello from $(hostname); sleep 10; done"]

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dummy-headless
+spec:
+  clusterIP: None
+  selector:
+    app: dummy
+  ports:
+  - port: 80
+    name: dummy
