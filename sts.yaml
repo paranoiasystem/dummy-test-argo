@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: dummy-statefulset
+  namespace: dummy-test
 spec:
   serviceName: dummy-headless
   replicas: 2

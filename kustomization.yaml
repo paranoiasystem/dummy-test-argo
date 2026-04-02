@@ -4,6 +4,5 @@ resources:
 - configmap.yaml
 - deployment.yaml
 - foobar-deployment.yaml
-- namespace.yaml
 - svc.yaml
 - sts.yaml
