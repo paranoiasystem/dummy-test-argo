@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  namespace: dummy-test
   labels:
     app: nginx
 spec:
